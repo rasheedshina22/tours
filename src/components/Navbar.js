@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import styles from "../css/navbar.module.css"
 import { FaAlignRight } from "react-icons/fa"
-import links from "./constants/links"
-import socialicons from "./constants/social-icons"
+import links from "../constants/links"
+import socialicons from "../constants/social-icons"
 import logo from "../images/logo.svg"
 
 const Navbar = () => {
