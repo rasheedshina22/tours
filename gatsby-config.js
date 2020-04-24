@@ -1,3 +1,7 @@
+// require("dotenv").config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
+
 module.exports = {
   siteMetadata: {
     title: "BackRoads",
@@ -15,8 +19,17 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: "4wywaprrohze",
+        accessToken: "NGXObDgbkQ45gJfbiJGZK6G9I4KSZev3XcYYRH00kZE",
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-transition-link`,
+    `gatsby-plugin-playground`,
   ],
 }
