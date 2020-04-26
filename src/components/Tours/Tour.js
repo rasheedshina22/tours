@@ -3,6 +3,8 @@ import Image from "gatsby-image"
 import styles from "../../css/tour.module.css"
 import { FaMap } from "react-icons/fa"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import PropTypes from "prop-types"
+
 const Tour = ({ tour }) => {
   const { name, price, country, days, slug, images } = tour
   let mainImage = images[0].fluid
@@ -30,6 +32,16 @@ const Tour = ({ tour }) => {
       </div>
     </article>
   )
+}
+//we can just add the validations here instead of in contentful
+Tour.propTypes = {
+  tour: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    days: PropTypes.number.isRequired,
+    images: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }),
 }
 
 export default Tour
