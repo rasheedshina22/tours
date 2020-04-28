@@ -3,10 +3,12 @@ import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import Contact from "../components/Contact/Contact"
+import SEO from "../components/SEO"
 
 const contact = props => {
   return (
     <Layout>
+      <SEO title="Contact" />
       <StyledHero img={props.data.contactBcg.childImageSharp.fluid} />
       <Contact />
     </Layout>

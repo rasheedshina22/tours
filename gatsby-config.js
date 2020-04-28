@@ -14,6 +14,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-playground`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,10 +35,14 @@ module.exports = {
         accessToken: "NGXObDgbkQ45gJfbiJGZK6G9I4KSZev3XcYYRH00kZE",
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-transition-link`,
-    `gatsby-plugin-playground`,
-    `gatsby-plugin-react-helmet`,
+
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://worldtours.netlify.app",
+        sitemap: "https://worldtours.netlify.app/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
   ],
 }
