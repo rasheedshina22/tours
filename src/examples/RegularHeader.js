@@ -8,7 +8,6 @@ const getSitedData = graphql`
         title
         description
         author
-        data
       }
     }
   }

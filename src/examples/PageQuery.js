@@ -23,7 +23,6 @@ export const query = graphql`
         title
         description
         author
-        data
       }
     }
   }

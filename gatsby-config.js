@@ -4,11 +4,13 @@
 
 module.exports = {
   siteMetadata: {
-    title: "BackRoads",
+    title: "Worldtours",
     description:
       "Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure",
     author: "rasheedshina",
-    data: ["item1", "item2"],
+    twitterusername: "iamrasheedshina",
+    image: "/static/defaultBcg.jpeg",
+    siteUrl: "https://worldtours.netlify.app",
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -31,5 +33,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-playground`,
+    `gatsby-plugin-react-helmet`,
   ],
 }
