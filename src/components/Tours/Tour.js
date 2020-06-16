@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "gatsby-image"
+import Img from "gatsby-image"
 import styles from "../../css/tour.module.css"
 import { FaMap } from "react-icons/fa"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
@@ -11,7 +11,7 @@ const Tour = ({ tour }) => {
   return (
     <article className={styles.tour}>
       <div className={styles.imgContainer}>
-        <Image fluid={mainImage} className={styles.img} alt="single tour" />
+        <Img fluid={mainImage} className={styles.img} alt="single tour" />
         <AniLink fade className={styles.link} to={`/tours/${slug}`}>
           details
         </AniLink>
